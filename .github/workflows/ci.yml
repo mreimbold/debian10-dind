@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        docker_version: ["20.10.5", "19.03.15"]
+        docker_version: ["20.10.6", "20.10.5", "19.03.15"]
     steps:
       - uses: actions/checkout@v2
       - name: Build image
@@ -27,7 +27,7 @@ jobs:
     needs: test
     strategy:
       matrix:
-        docker_version: ["20.10.5", "19.03.15"]
+        docker_version: ["20.10.6", "20.10.5", "19.03.15"]
     steps:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
@@ -47,7 +47,7 @@ jobs:
           push: true
           tags: mreimbold/debian10-dind:latest
           build-args: |
-            DOCKERIMAGE_TAG=20.10.5-dind
+            DOCKERIMAGE_TAG=20.10.6-dind
 
       - name: Build and push specific tags
         uses: docker/build-push-action@v2

@@ -9,6 +9,7 @@ Python 3.x and sudo as a become method are preinstalled.
 ## Available tags
 
   - `latest`: Latest stable version of Docker
+  - `20.10.6`: Docker Version 20.10.5
   - `20.10.5`: Docker Version 20.10.5
   - `19.03.15`: Docker Version 19.03.15
 
